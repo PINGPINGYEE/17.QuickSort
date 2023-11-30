@@ -42,11 +42,12 @@ void quick_sort(int list[], int left, int right, int isFirst) {
             printf("\n");
         }
 
-        quick_sort(list, left, q - 1, isFirst);
-        quick_sort(list, q + 1, right, isFirst);
+        quick_sort(list, left, q - 1, isFirst); // 재귀적 방법 사용
+        quick_sort(list, q + 1, right, isFirst); // 재귀적 방법 사용
     }
 }
 
+// main 함수수
 int main(void) {
     int list[MAX_SIZE];
     int n = MAX_SIZE; 
@@ -116,7 +117,7 @@ int partition(int list[], int left, int right) {
     return high;
 }
 
-// 반복적으로 quicksort 구현
+// stack을 이용하여 반복적으로 quicksort 구현
 void iterative_quick_sort(int list[], int left, int right, int isFirst) {
     Range stack[STACK_SIZE];
     int top = -1;
@@ -148,7 +149,7 @@ void iterative_quick_sort(int list[], int left, int right, int isFirst) {
 }
 
 
-
+// main 함수
 int main(void) {
     int list[MAX_SIZE];
     int n = MAX_SIZE;
